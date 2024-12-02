@@ -5,4 +5,5 @@ assets:
 #Lua Script
 - name: scripts/1fmAPShortenGoMode.lua
   method: copy
-  source: 1fmAPShortenGoMode.lua
+  source:
+  - name: 1fmAPShortenGoMode.lua
