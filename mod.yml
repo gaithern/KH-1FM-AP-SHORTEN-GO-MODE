@@ -1,0 +1,8 @@
+title: KH1FM Archipelago Companion
+originalAuthor: Gicu
+description: Optional mod that shortens GO MODE for KH1 Randomizer
+assets:
+#Lua Script
+- name: scripts/1fmAPShortenGoMode.lua
+  method: copy
+  source: 1fmAPShortenGoMode.lua
