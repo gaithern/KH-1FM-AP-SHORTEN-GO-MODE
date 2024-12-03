@@ -13,7 +13,7 @@ canExecute = false
 local world = {0x2340E5C, 0x233FE84}
 local room = {0x2340E5C + 0x68, 0x233FE84 + 0x8}
 local cutscene_flags_address = {0x2DEB264, 0x2DEA864}
-local hollow_bastion_warps = {0x2DEBC67, 0x2DEB267}
+local end_of_the_world_warps = {0x2DEBC68, 0x2DEB268}
 
 local worldWarp = {0x2340EF0, 0x233FEB8}
 local roomWarp = {0x2340EF0 + 4, 0x233FEB8 + 4}
@@ -40,8 +40,8 @@ end
 
 function _OnFrame()
     if canExecute then
-        if ReadByte(hollow_bastion_warps[game_version]) ~= 0x7 then
-            WriteByte(hollow_bastion_warps[game_version], 0x7)
+        if ReadByte(end_of_the_world_warps[game_version]) ~= 0x7 then
+            WriteByte(end_of_the_world_warps[game_version], 0x7)
         end
         if ReadByte(world[game_version]) == 0x10 and ReadByte(room[game_version]) == 0x21 and ReadByte(cutscene_flags_address[game_version] + 0xB) == 0x6E then
             WriteByte(cutscene_flags_address[game_version] + 0xB, 0x9B)
